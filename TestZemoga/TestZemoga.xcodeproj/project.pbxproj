@@ -20,6 +20,7 @@
 		71CF9B9C281D899500587320 /* PostLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B9B281D899500587320 /* PostLoaderTests.swift */; };
 		71CF9B9E281D97E100587320 /* RemotePostLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B9D281D97E100587320 /* RemotePostLoader.swift */; };
 		71CF9BA0281D97FD00587320 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B9F281D97FD00587320 /* HTTPClient.swift */; };
+		71CF9BA2281D984300587320 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BA1281D984300587320 /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		71CF9B9B281D899500587320 /* PostLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoaderTests.swift; sourceTree = "<group>"; };
 		71CF9B9D281D97E100587320 /* RemotePostLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePostLoader.swift; sourceTree = "<group>"; };
 		71CF9B9F281D97FD00587320 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		71CF9BA1281D984300587320 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				71CF9B9D281D97E100587320 /* RemotePostLoader.swift */,
 				71CF9B9F281D97FD00587320 /* HTTPClient.swift */,
+				71CF9BA1281D984300587320 /* URLSessionHTTPClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71CF9BA2281D984300587320 /* URLSessionHTTPClient.swift in Sources */,
 				71CF9B68281D886B00587320 /* ViewController.swift in Sources */,
 				71CF9B64281D886B00587320 /* AppDelegate.swift in Sources */,
 				71CF9BA0281D97FD00587320 /* HTTPClient.swift in Sources */,
