@@ -25,5 +25,4 @@ public struct Post: Equatable, Hashable, Decodable {
         self.body = body
         self.isFavorite = isFavorite
     }
-    
 }

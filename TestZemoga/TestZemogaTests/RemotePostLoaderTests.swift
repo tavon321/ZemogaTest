@@ -1,5 +1,5 @@
 //
-//  PostLoaderTests.swift
+//  RemotePostLoaderTests.swift
 //  TestZemogaTests
 //
 //  Created by Gustavo on 30/04/22.
@@ -8,7 +8,7 @@
 import XCTest
 import TestZemoga
 
-class PostLoaderTests: XCTestCase {
+class RemotePostLoaderTests: XCTestCase {
     
     func test_init_doesNotRequestDataFromUrl() {
         let (_ , client) = makeSUT()

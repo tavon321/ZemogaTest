@@ -15,20 +15,26 @@
 		71CF9B70281D886C00587320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CF9B6E281D886C00587320 /* LaunchScreen.storyboard */; };
 		71CF9B85281D886C00587320 /* TestZemogaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B84281D886C00587320 /* TestZemogaUITests.swift */; };
 		71CF9B96281D88F800587320 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B95281D88F800587320 /* Post.swift */; };
-		71CF9B9C281D899500587320 /* PostLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B9B281D899500587320 /* PostLoaderTests.swift */; };
+		71CF9B9C281D899500587320 /* RemotePostLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B9B281D899500587320 /* RemotePostLoaderTests.swift */; };
 		71CF9B9E281D97E100587320 /* RemotePostLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B9D281D97E100587320 /* RemotePostLoader.swift */; };
 		71CF9BA0281D97FD00587320 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B9F281D97FD00587320 /* HTTPClient.swift */; };
 		71CF9BA2281D984300587320 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BA1281D984300587320 /* URLSessionHTTPClient.swift */; };
 		71CF9BA5281D9DC500587320 /* PostViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BA4281D9DC500587320 /* PostViewModelTests.swift */; };
 		71CF9BA7281D9DF800587320 /* PostLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BA6281D9DF800587320 /* PostLoader.swift */; };
 		71CF9BAA281DA23400587320 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BA9281DA23400587320 /* Observer.swift */; };
-		71CF9BAC281DA55B00587320 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BAB281DA55B00587320 /* Helpers.swift */; };
+		71CF9BAC281DA55B00587320 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BAB281DA55B00587320 /* SharedTestHelpers.swift */; };
 		71CF9BAE281DA86F00587320 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BAD281DA86F00587320 /* PostViewModel.swift */; };
 		71CF9BB2281DCC2900587320 /* UITableView+dequeueReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB1281DCC2900587320 /* UITableView+dequeueReusableCell.swift */; };
 		71CF9BB4281DCC5300587320 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB3281DCC5300587320 /* PostCell.swift */; };
 		71CF9BB6281DD1C200587320 /* PostCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB5281DD1C200587320 /* PostCellController.swift */; };
 		71CF9BB8281DD47600587320 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB7281DD47600587320 /* MainQueueDispatchDecorator.swift */; };
 		71CF9BBA281DD4AB00587320 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB9281DD4AB00587320 /* FeedUIComposer.swift */; };
+		71CF9BBD281DDDD000587320 /* UserInfoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BBC281DDDD000587320 /* UserInfoLoader.swift */; };
+		71CF9BBF281DDDFF00587320 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BBE281DDDFF00587320 /* UserInfo.swift */; };
+		71CF9BC1281DDE9900587320 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC0281DDE9900587320 /* Comment.swift */; };
+		71CF9BC3281DE4BE00587320 /* RemoteUserInfoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC2281DE4BE00587320 /* RemoteUserInfoLoader.swift */; };
+		71CF9BC5281DE7BE00587320 /* RemoteUserinfoLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC4281DE7BE00587320 /* RemoteUserinfoLoaderTests.swift */; };
+		71CF9BC8281DE85C00587320 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC7281DE85C00587320 /* HTTPClientSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,20 +67,26 @@
 		71CF9B80281D886C00587320 /* TestZemogaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestZemogaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CF9B84281D886C00587320 /* TestZemogaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestZemogaUITests.swift; sourceTree = "<group>"; };
 		71CF9B95281D88F800587320 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		71CF9B9B281D899500587320 /* PostLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoaderTests.swift; sourceTree = "<group>"; };
+		71CF9B9B281D899500587320 /* RemotePostLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePostLoaderTests.swift; sourceTree = "<group>"; };
 		71CF9B9D281D97E100587320 /* RemotePostLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePostLoader.swift; sourceTree = "<group>"; };
 		71CF9B9F281D97FD00587320 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		71CF9BA1281D984300587320 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		71CF9BA4281D9DC500587320 /* PostViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTests.swift; sourceTree = "<group>"; };
 		71CF9BA6281D9DF800587320 /* PostLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoader.swift; sourceTree = "<group>"; };
 		71CF9BA9281DA23400587320 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
-		71CF9BAB281DA55B00587320 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		71CF9BAB281DA55B00587320 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		71CF9BAD281DA86F00587320 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		71CF9BB1281DCC2900587320 /* UITableView+dequeueReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+dequeueReusableCell.swift"; sourceTree = "<group>"; };
 		71CF9BB3281DCC5300587320 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		71CF9BB5281DD1C200587320 /* PostCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellController.swift; sourceTree = "<group>"; };
 		71CF9BB7281DD47600587320 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		71CF9BB9281DD4AB00587320 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
+		71CF9BBC281DDDD000587320 /* UserInfoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoLoader.swift; sourceTree = "<group>"; };
+		71CF9BBE281DDDFF00587320 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		71CF9BC0281DDE9900587320 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		71CF9BC2281DE4BE00587320 /* RemoteUserInfoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserInfoLoader.swift; sourceTree = "<group>"; };
+		71CF9BC4281DE7BE00587320 /* RemoteUserinfoLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserinfoLoaderTests.swift; sourceTree = "<group>"; };
+		71CF9BC7281DE85C00587320 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +152,10 @@
 		71CF9B79281D886C00587320 /* TestZemogaTests */ = {
 			isa = PBXGroup;
 			children = (
-				71CF9BAB281DA55B00587320 /* Helpers.swift */,
-				71CF9B9B281D899500587320 /* PostLoaderTests.swift */,
+				71CF9BC6281DE84E00587320 /* Helpers */,
 				71CF9BA4281D9DC500587320 /* PostViewModelTests.swift */,
+				71CF9B9B281D899500587320 /* RemotePostLoaderTests.swift */,
+				71CF9BC4281DE7BE00587320 /* RemoteUserinfoLoaderTests.swift */,
 			);
 			path = TestZemogaTests;
 			sourceTree = "<group>";
@@ -158,8 +171,9 @@
 		71CF9B93281D88AD00587320 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				71CF9B9D281D97E100587320 /* RemotePostLoader.swift */,
 				71CF9B9F281D97FD00587320 /* HTTPClient.swift */,
+				71CF9B9D281D97E100587320 /* RemotePostLoader.swift */,
+				71CF9BC2281DE4BE00587320 /* RemoteUserInfoLoader.swift */,
 				71CF9BA1281D984300587320 /* URLSessionHTTPClient.swift */,
 			);
 			path = API;
@@ -170,6 +184,9 @@
 			children = (
 				71CF9B95281D88F800587320 /* Post.swift */,
 				71CF9BA6281D9DF800587320 /* PostLoader.swift */,
+				71CF9BBC281DDDD000587320 /* UserInfoLoader.swift */,
+				71CF9BBE281DDDFF00587320 /* UserInfo.swift */,
+				71CF9BC0281DDE9900587320 /* Comment.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -220,6 +237,15 @@
 				71CF9B65281D886B00587320 /* SceneDelegate.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		71CF9BC6281DE84E00587320 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9BAB281DA55B00587320 /* SharedTestHelpers.swift */,
+				71CF9BC7281DE85C00587320 /* HTTPClientSpy.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,12 +380,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				71CF9BAE281DA86F00587320 /* PostViewModel.swift in Sources */,
+				71CF9BBD281DDDD000587320 /* UserInfoLoader.swift in Sources */,
 				71CF9BA7281D9DF800587320 /* PostLoader.swift in Sources */,
 				71CF9BAA281DA23400587320 /* Observer.swift in Sources */,
 				71CF9BB2281DCC2900587320 /* UITableView+dequeueReusableCell.swift in Sources */,
+				71CF9BBF281DDDFF00587320 /* UserInfo.swift in Sources */,
 				71CF9BBA281DD4AB00587320 /* FeedUIComposer.swift in Sources */,
+				71CF9BC1281DDE9900587320 /* Comment.swift in Sources */,
 				71CF9BA2281D984300587320 /* URLSessionHTTPClient.swift in Sources */,
 				71CF9B68281D886B00587320 /* PostsController.swift in Sources */,
+				71CF9BC3281DE4BE00587320 /* RemoteUserInfoLoader.swift in Sources */,
 				71CF9BB6281DD1C200587320 /* PostCellController.swift in Sources */,
 				71CF9B64281D886B00587320 /* AppDelegate.swift in Sources */,
 				71CF9BB8281DD47600587320 /* MainQueueDispatchDecorator.swift in Sources */,
@@ -376,8 +406,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				71CF9BA5281D9DC500587320 /* PostViewModelTests.swift in Sources */,
-				71CF9B9C281D899500587320 /* PostLoaderTests.swift in Sources */,
-				71CF9BAC281DA55B00587320 /* Helpers.swift in Sources */,
+				71CF9B9C281D899500587320 /* RemotePostLoaderTests.swift in Sources */,
+				71CF9BAC281DA55B00587320 /* SharedTestHelpers.swift in Sources */,
+				71CF9BC5281DE7BE00587320 /* RemoteUserinfoLoaderTests.swift in Sources */,
+				71CF9BC8281DE85C00587320 /* HTTPClientSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
