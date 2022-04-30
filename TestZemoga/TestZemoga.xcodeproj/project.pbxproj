@@ -16,6 +16,8 @@
 		71CF9B7B281D886C00587320 /* TestZemogaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B7A281D886C00587320 /* TestZemogaTests.swift */; };
 		71CF9B85281D886C00587320 /* TestZemogaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B84281D886C00587320 /* TestZemogaUITests.swift */; };
 		71CF9B87281D886C00587320 /* TestZemogaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B86281D886C00587320 /* TestZemogaUITestsLaunchTests.swift */; };
+		71CF9B96281D88F800587320 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B95281D88F800587320 /* Post.swift */; };
+		71CF9B9C281D899500587320 /* PostLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B9B281D899500587320 /* PostLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		71CF9B80281D886C00587320 /* TestZemogaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestZemogaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CF9B84281D886C00587320 /* TestZemogaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestZemogaUITests.swift; sourceTree = "<group>"; };
 		71CF9B86281D886C00587320 /* TestZemogaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestZemogaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71CF9B95281D88F800587320 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		71CF9B9B281D899500587320 /* PostLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		71CF9B62281D886B00587320 /* TestZemoga */ = {
 			isa = PBXGroup;
 			children = (
+				71CF9B94281D88B500587320 /* Feature */,
+				71CF9B93281D88AD00587320 /* API */,
 				71CF9B63281D886B00587320 /* AppDelegate.swift */,
 				71CF9B65281D886B00587320 /* SceneDelegate.swift */,
 				71CF9B67281D886B00587320 /* ViewController.swift */,
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				71CF9B7A281D886C00587320 /* TestZemogaTests.swift */,
+				71CF9B9B281D899500587320 /* PostLoaderTests.swift */,
 			);
 			path = TestZemogaTests;
 			sourceTree = "<group>";
@@ -125,6 +132,21 @@
 				71CF9B86281D886C00587320 /* TestZemogaUITestsLaunchTests.swift */,
 			);
 			path = TestZemogaUITests;
+			sourceTree = "<group>";
+		};
+		71CF9B93281D88AD00587320 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		71CF9B94281D88B500587320 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9B95281D88F800587320 /* Post.swift */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,7 @@
 				71CF9B68281D886B00587320 /* ViewController.swift in Sources */,
 				71CF9B64281D886B00587320 /* AppDelegate.swift in Sources */,
 				71CF9B66281D886B00587320 /* SceneDelegate.swift in Sources */,
+				71CF9B96281D88F800587320 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71CF9B9C281D899500587320 /* PostLoaderTests.swift in Sources */,
 				71CF9B7B281D886C00587320 /* TestZemogaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
