@@ -58,8 +58,8 @@ class PostLoaderTests: XCTestCase {
     func test_load_deliversItemsOn200HTTPResponseWithJSONItems() {
         let (sut, client) = makeSUT()
         
-        let item1 = makeItem(id: 0, userId: 1, title: "a title", body: "a body")
-        let item2 = makeItem(id: 0, userId: 1, title: "a title", body: "a body")
+        let item1 = makePost(id: 0, userId: 1, title: "a title", body: "a body")
+        let item2 = makePost(id: 0, userId: 1, title: "a title", body: "a body")
         
         expect(sut, toCompleteWith: .success([item1.model, item2.model])) {
             let data = makeItemsJson([item1.json, item2.json])
@@ -105,29 +105,6 @@ class PostLoaderTests: XCTestCase {
         action()
         
         wait(for: [exp], timeout: 0.1)
-    }
-    
-    private func makeItem(id: Int,
-                          userId: Int,
-                          title: String,
-                          body: String) -> (model: Post, json: [String: Any]) {
-        let model = Post(id: id,
-                         userId: userId,
-                         title: title,
-                         body: body,
-                         isFavorite: nil)
-        let json = [
-            "id": id,
-            "userId": userId,
-            "title": title,
-            "body": body
-        ].compactMapValues({ return $0 })
-        
-        return (model, json)
-    }
-    
-    private func makeItemsJson(_ items: [[String: Any]]) -> Data {
-        return try! JSONSerialization.data(withJSONObject: items)
     }
     
     private func makeSUT(url: URL = URL(string: "https://a-given-url.com")!)

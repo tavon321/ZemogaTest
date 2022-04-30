@@ -13,6 +13,7 @@ class PostViewModel {
     private let postsLoader: PostLoader
     
     public var onLoadingStateChange: (Observer<Bool>)?
+    public var onPostLoaded: (Observer<[Post]>)?
     
     init(postLoader: PostLoader) {
         self.postsLoader = postLoader
@@ -20,9 +21,16 @@ class PostViewModel {
     
     func loadPosts() {
         onLoadingStateChange?(true)
-        postsLoader.load { _ in
+        postsLoader.load { [weak self] result in
+            switch result {
+            case .success(let posts):
+                self?.onPostLoaded?(posts)
+            case .failure(let failure):
+                // TODO: Handler errors
+                print(failure)
+            }
             
-            self.onLoadingStateChange?(false)
+            self?.onLoadingStateChange?(false)
         }
     }
 }
@@ -46,26 +54,67 @@ class PostViewModelTests: XCTestCase {
     func test_loadPosts_messageOnLoadingStateChangeWithTrue() {
         let (sut, _) = makeSUT()
         
-        expect(sut, toReceiveonLoadingStateChangeEvent: [true]) { }
+        expect(sut, toReceiveOnLoadingStateChangeEvent: [true]) { }
     }
     
     func test_loadPosts_messageOnLoadingStateChangeWithFalse() {
         let (sut, loader) = makeSUT()
 
-        expect(sut, toReceiveonLoadingStateChangeEvent: [true, false]) {
+        expect(sut, toReceiveOnLoadingStateChangeEvent: [true, false]) {
             loader.complete(posts: [])
         }
+    }
+    
+    func test_loadPosts_messageOnPostsLoadedEventWhenLoaderFinishedWithPosts() {
+        let (sut, loader) = makeSUT()
+        
+        let item1 = makePost(id: 0, userId: 1, title: "a title", body: "a body").model
+        let item2 = makePost(id: 0, userId: 1, title: "a title", body: "a body").model
+        
+        expect(sut, toReceiveOnPostsLoadedEvent: [[item1, item2]]) {
+            loader.complete(posts: [item1, item2])
+        }
+    }
+    
+    func test_loadPosts_doesNotMessagePostsLoadedAfterSUTInstanceHasBeenDeallocated() {
+        let loader = PostLoaderSpy()
+        var sut: PostViewModel? = PostViewModel(postLoader: loader)
+        
+        sut?.onPostLoaded = { _ in
+            XCTFail("Expected no event")
+        }
+        
+        sut?.onLoadingStateChange = { isLoading in
+            XCTAssertTrue(isLoading, "Expected only starLoading event")
+        }
+        
+        sut?.loadPosts()
+        sut = nil
+        
+        loader.complete(posts: [])
     }
     
     // MARK: - Helpers
     
     func expect(_ sut: PostViewModel,
-                toReceiveonLoadingStateChangeEvent events: [Bool],
+                toReceiveOnLoadingStateChangeEvent events: [Bool],
                 when action: () -> Void) {
         var capturedEvents = [Bool]()
         sut.onLoadingStateChange = { isLoading in
             capturedEvents.append(isLoading)
             
+        }
+        sut.loadPosts()
+        action()
+        XCTAssertEqual(capturedEvents, events)
+    }
+    
+    func expect(_ sut: PostViewModel,
+                toReceiveOnPostsLoadedEvent events: [[Post]],
+                when action: () -> Void) {
+        var capturedEvents = [[Post]]()
+        sut.onPostLoaded = { posts in
+            capturedEvents.append(posts)
         }
         sut.loadPosts()
         action()
