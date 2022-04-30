@@ -8,47 +8,6 @@
 import XCTest
 import TestZemoga
 
-public protocol HTTPClient {
-    typealias Result = Swift.Result<(response: HTTPURLResponse, data: Data), Error>
-    
-    func get(from url: URL, completion: @escaping (Result) -> Void)
-}
-
-public class RemotePostLoader {
-    private let client: HTTPClient
-    private let url: URL
-    
-    typealias Result = Swift.Result<[Post], Swift.Error>
-    
-    enum Error: Swift.Error {
-        case connectivy
-        case invalidData
-    }
-    
-    internal init(client: HTTPClient, url: URL) {
-        self.client = client
-        self.url = url
-    }
-    
-    func load(completion: @escaping (Result) -> Void) {
-        client.get(from: url) { [weak self] result in
-            guard self != nil else { return }
-            switch result {
-            case let .success((response, data)):
-                if response.statusCode == 200,
-                   let posts = try? JSONDecoder().decode([Post].self, from: data) {
-                    completion(.success(posts))
-                } else {
-                    completion(.failure(Error.invalidData))
-                }
-                
-            case .failure:
-                completion(.failure(Error.connectivy))
-            }
-        }
-    }
-}
-
 class PostLoaderTests: XCTestCase {
     
     func test_init_doesNotRequestDataFromUrl() {
