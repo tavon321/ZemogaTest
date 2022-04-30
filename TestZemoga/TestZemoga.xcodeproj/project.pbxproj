@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		71CF9B64281D886B00587320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B63281D886B00587320 /* AppDelegate.swift */; };
 		71CF9B66281D886B00587320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B65281D886B00587320 /* SceneDelegate.swift */; };
-		71CF9B68281D886B00587320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B67281D886B00587320 /* ViewController.swift */; };
-		71CF9B6B281D886B00587320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CF9B69281D886B00587320 /* Main.storyboard */; };
+		71CF9B68281D886B00587320 /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B67281D886B00587320 /* PostsController.swift */; };
+		71CF9B6B281D886B00587320 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CF9B69281D886B00587320 /* Posts.storyboard */; };
 		71CF9B6D281D886C00587320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71CF9B6C281D886C00587320 /* Assets.xcassets */; };
 		71CF9B70281D886C00587320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CF9B6E281D886C00587320 /* LaunchScreen.storyboard */; };
 		71CF9B85281D886C00587320 /* TestZemogaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9B84281D886C00587320 /* TestZemogaUITests.swift */; };
@@ -24,6 +24,11 @@
 		71CF9BAA281DA23400587320 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BA9281DA23400587320 /* Observer.swift */; };
 		71CF9BAC281DA55B00587320 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BAB281DA55B00587320 /* Helpers.swift */; };
 		71CF9BAE281DA86F00587320 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BAD281DA86F00587320 /* PostViewModel.swift */; };
+		71CF9BB2281DCC2900587320 /* UITableView+dequeueReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB1281DCC2900587320 /* UITableView+dequeueReusableCell.swift */; };
+		71CF9BB4281DCC5300587320 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB3281DCC5300587320 /* PostCell.swift */; };
+		71CF9BB6281DD1C200587320 /* PostCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB5281DD1C200587320 /* PostCellController.swift */; };
+		71CF9BB8281DD47600587320 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB7281DD47600587320 /* MainQueueDispatchDecorator.swift */; };
+		71CF9BBA281DD4AB00587320 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB9281DD4AB00587320 /* FeedUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +52,8 @@
 		71CF9B60281D886B00587320 /* TestZemoga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestZemoga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CF9B63281D886B00587320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CF9B65281D886B00587320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		71CF9B67281D886B00587320 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		71CF9B6A281D886B00587320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71CF9B67281D886B00587320 /* PostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
+		71CF9B6A281D886B00587320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Posts.storyboard; sourceTree = "<group>"; };
 		71CF9B6C281D886C00587320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71CF9B6F281D886C00587320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71CF9B71281D886C00587320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +70,11 @@
 		71CF9BA9281DA23400587320 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		71CF9BAB281DA55B00587320 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		71CF9BAD281DA86F00587320 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		71CF9BB1281DCC2900587320 /* UITableView+dequeueReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+dequeueReusableCell.swift"; sourceTree = "<group>"; };
+		71CF9BB3281DCC5300587320 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		71CF9BB5281DD1C200587320 /* PostCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellController.swift; sourceTree = "<group>"; };
+		71CF9BB7281DD47600587320 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
+		71CF9BB9281DD4AB00587320 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,15 +126,13 @@
 			isa = PBXGroup;
 			children = (
 				71CF9B71281D886C00587320 /* Info.plist */,
-				71CF9B63281D886B00587320 /* AppDelegate.swift */,
-				71CF9B65281D886B00587320 /* SceneDelegate.swift */,
-				71CF9B67281D886B00587320 /* ViewController.swift */,
 				71CF9B6C281D886C00587320 /* Assets.xcassets */,
 				71CF9B93281D88AD00587320 /* API */,
+				71CF9BBB281DD4AE00587320 /* Core */,
 				71CF9B94281D88B500587320 /* Feature */,
-				71CF9BA3281D9DAC00587320 /* Presentation */,
 				71CF9B6E281D886C00587320 /* LaunchScreen.storyboard */,
-				71CF9B69281D886B00587320 /* Main.storyboard */,
+				71CF9BA3281D9DAC00587320 /* Presentation */,
+				71CF9BAF281DA8FC00587320 /* UI */,
 			);
 			path = TestZemoga;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 			children = (
 				71CF9BA8281DA22700587320 /* Common */,
 				71CF9BAD281DA86F00587320 /* PostViewModel.swift */,
+				71CF9BB7281DD47600587320 /* MainQueueDispatchDecorator.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -181,6 +190,36 @@
 				71CF9BA9281DA23400587320 /* Observer.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		71CF9BAF281DA8FC00587320 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9BB0281DCC1400587320 /* Helpers */,
+				71CF9BB3281DCC5300587320 /* PostCell.swift */,
+				71CF9B67281D886B00587320 /* PostsController.swift */,
+				71CF9BB5281DD1C200587320 /* PostCellController.swift */,
+				71CF9B69281D886B00587320 /* Posts.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		71CF9BB0281DCC1400587320 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9BB1281DCC2900587320 /* UITableView+dequeueReusableCell.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		71CF9BBB281DD4AE00587320 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9BB9281DD4AB00587320 /* FeedUIComposer.swift */,
+				71CF9B63281D886B00587320 /* AppDelegate.swift */,
+				71CF9B65281D886B00587320 /* SceneDelegate.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +328,7 @@
 			files = (
 				71CF9B70281D886C00587320 /* LaunchScreen.storyboard in Resources */,
 				71CF9B6D281D886C00587320 /* Assets.xcassets in Resources */,
-				71CF9B6B281D886B00587320 /* Main.storyboard in Resources */,
+				71CF9B6B281D886B00587320 /* Posts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,13 +356,18 @@
 				71CF9BAE281DA86F00587320 /* PostViewModel.swift in Sources */,
 				71CF9BA7281D9DF800587320 /* PostLoader.swift in Sources */,
 				71CF9BAA281DA23400587320 /* Observer.swift in Sources */,
+				71CF9BB2281DCC2900587320 /* UITableView+dequeueReusableCell.swift in Sources */,
+				71CF9BBA281DD4AB00587320 /* FeedUIComposer.swift in Sources */,
 				71CF9BA2281D984300587320 /* URLSessionHTTPClient.swift in Sources */,
-				71CF9B68281D886B00587320 /* ViewController.swift in Sources */,
+				71CF9B68281D886B00587320 /* PostsController.swift in Sources */,
+				71CF9BB6281DD1C200587320 /* PostCellController.swift in Sources */,
 				71CF9B64281D886B00587320 /* AppDelegate.swift in Sources */,
+				71CF9BB8281DD47600587320 /* MainQueueDispatchDecorator.swift in Sources */,
 				71CF9BA0281D97FD00587320 /* HTTPClient.swift in Sources */,
 				71CF9B9E281D97E100587320 /* RemotePostLoader.swift in Sources */,
 				71CF9B66281D886B00587320 /* SceneDelegate.swift in Sources */,
 				71CF9B96281D88F800587320 /* Post.swift in Sources */,
+				71CF9BB4281DCC5300587320 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,12 +405,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		71CF9B69281D886B00587320 /* Main.storyboard */ = {
+		71CF9B69281D886B00587320 /* Posts.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				71CF9B6A281D886B00587320 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Posts.storyboard;
 			sourceTree = "<group>";
 		};
 		71CF9B6E281D886C00587320 /* LaunchScreen.storyboard */ = {
@@ -506,7 +550,7 @@
 				INFOPLIST_FILE = TestZemoga/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -518,7 +562,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -534,7 +578,7 @@
 				INFOPLIST_FILE = TestZemoga/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -546,7 +590,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

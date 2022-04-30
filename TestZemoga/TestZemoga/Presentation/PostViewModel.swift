@@ -28,7 +28,6 @@ public final class PostViewModel {
                 // TODO: Handler errors
                 print(failure)
             }
-            
             self?.onLoadingStateChange?(false)
         }
     }

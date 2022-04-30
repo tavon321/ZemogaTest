@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Post: Equatable, Decodable {
+public struct Post: Equatable, Hashable, Decodable {
     public let id: Int
     public let userId: Int
     public let title: String
