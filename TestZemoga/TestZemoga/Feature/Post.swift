@@ -7,19 +7,23 @@
 
 import Foundation
 
-public struct Post {
-    public let id: String
+public struct Post: Equatable, Decodable {
+    public let id: Int
+    public let userId: Int
     public let title: String
     public let body: String
-    public let isFavorite: Bool
+    public let isFavorite: Bool?
     
-    public init(id: String,
+    public init(id: Int,
+                userId: Int,
                 title: String,
                 body: String,
-                isFavorite: Bool) {
+                isFavorite: Bool? = nil) {
         self.id = id
+        self.userId = userId
         self.title = title
         self.body = body
         self.isFavorite = isFavorite
     }
+    
 }
