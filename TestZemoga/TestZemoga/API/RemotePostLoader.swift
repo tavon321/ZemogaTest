@@ -7,11 +7,11 @@
 
 import Foundation
 
-public class RemotePostLoader {
+public class RemotePostLoader: PostLoader {
     private let client: HTTPClient
     private let url: URL
     
-    public typealias Result = Swift.Result<[Post], Swift.Error>
+    public typealias Result = PostLoader.Result
     
     public enum Error: Swift.Error {
         case connectivy
