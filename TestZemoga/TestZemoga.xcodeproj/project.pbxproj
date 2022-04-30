@@ -35,6 +35,8 @@
 		71CF9BC3281DE4BE00587320 /* RemoteUserInfoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC2281DE4BE00587320 /* RemoteUserInfoLoader.swift */; };
 		71CF9BC5281DE7BE00587320 /* RemoteUserinfoLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC4281DE7BE00587320 /* RemoteUserinfoLoaderTests.swift */; };
 		71CF9BC8281DE85C00587320 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC7281DE85C00587320 /* HTTPClientSpy.swift */; };
+		71CF9BCA281DEBBE00587320 /* CommentsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC9281DEBBE00587320 /* CommentsLoader.swift */; };
+		71CF9BCC281DEBE100587320 /* RemoteCommentsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BCB281DEBE100587320 /* RemoteCommentsLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		71CF9BC2281DE4BE00587320 /* RemoteUserInfoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserInfoLoader.swift; sourceTree = "<group>"; };
 		71CF9BC4281DE7BE00587320 /* RemoteUserinfoLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserinfoLoaderTests.swift; sourceTree = "<group>"; };
 		71CF9BC7281DE85C00587320 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
+		71CF9BC9281DEBBE00587320 /* CommentsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsLoader.swift; sourceTree = "<group>"; };
+		71CF9BCB281DEBE100587320 /* RemoteCommentsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommentsLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				71CF9B9F281D97FD00587320 /* HTTPClient.swift */,
+				71CF9BCB281DEBE100587320 /* RemoteCommentsLoader.swift */,
 				71CF9B9D281D97E100587320 /* RemotePostLoader.swift */,
 				71CF9BC2281DE4BE00587320 /* RemoteUserInfoLoader.swift */,
 				71CF9BA1281D984300587320 /* URLSessionHTTPClient.swift */,
@@ -182,11 +187,12 @@
 		71CF9B94281D88B500587320 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				71CF9BC0281DDE9900587320 /* Comment.swift */,
+				71CF9BC9281DEBBE00587320 /* CommentsLoader.swift */,
 				71CF9B95281D88F800587320 /* Post.swift */,
 				71CF9BA6281D9DF800587320 /* PostLoader.swift */,
-				71CF9BBC281DDDD000587320 /* UserInfoLoader.swift */,
 				71CF9BBE281DDDFF00587320 /* UserInfo.swift */,
-				71CF9BC0281DDE9900587320 /* Comment.swift */,
+				71CF9BBC281DDDD000587320 /* UserInfoLoader.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				71CF9BBA281DD4AB00587320 /* FeedUIComposer.swift in Sources */,
 				71CF9BC1281DDE9900587320 /* Comment.swift in Sources */,
 				71CF9BA2281D984300587320 /* URLSessionHTTPClient.swift in Sources */,
+				71CF9BCA281DEBBE00587320 /* CommentsLoader.swift in Sources */,
 				71CF9B68281D886B00587320 /* PostsController.swift in Sources */,
 				71CF9BC3281DE4BE00587320 /* RemoteUserInfoLoader.swift in Sources */,
 				71CF9BB6281DD1C200587320 /* PostCellController.swift in Sources */,
@@ -396,6 +403,7 @@
 				71CF9BA0281D97FD00587320 /* HTTPClient.swift in Sources */,
 				71CF9B9E281D97E100587320 /* RemotePostLoader.swift in Sources */,
 				71CF9B66281D886B00587320 /* SceneDelegate.swift in Sources */,
+				71CF9BCC281DEBE100587320 /* RemoteCommentsLoader.swift in Sources */,
 				71CF9B96281D88F800587320 /* Post.swift in Sources */,
 				71CF9BB4281DCC5300587320 /* PostCell.swift in Sources */,
 			);
