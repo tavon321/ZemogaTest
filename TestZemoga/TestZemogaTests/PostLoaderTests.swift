@@ -16,9 +16,16 @@ public protocol HTTPClient {
 
 public class RemotePostLoader {
     private let client: HTTPClient
+    private let url: URL
     
-    internal init(client: HTTPClient) {
+    internal init(client: HTTPClient, url: URL) {
         self.client = client
+        self.url = url
+    }
+    
+    func load() {
+        client.get(from: url) { _ in
+        }
     }
 }
 
@@ -30,11 +37,21 @@ class PostLoaderTests: XCTestCase {
         XCTAssertTrue(client.requestedURLs.isEmpty)
     }
     
+    func test_load_requestDataFromURL() {
+        let expectedUrl = URL(string: "https://a-given-url.com")!
+        let (sut, client) = makeSUT(url: expectedUrl)
+        
+        sut.load()
+        
+        XCTAssertEqual(client.requestedURLs, [expectedUrl])
+    }
+    
     // MARK: - Helpers
     
-    private func makeSUT() -> (sut: RemotePostLoader, client: HTTPClientSpy) {
+    private func makeSUT(url: URL = URL(string: "https://a-given-url.com")!)
+    -> (sut: RemotePostLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
-        let sut = RemotePostLoader(client: client)
+        let sut = RemotePostLoader(client: client, url: url)
         
         return (sut: sut, client: client)
     }
