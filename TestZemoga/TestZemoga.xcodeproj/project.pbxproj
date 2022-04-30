@@ -23,6 +23,7 @@
 		71CF9BA7281D9DF800587320 /* PostLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BA6281D9DF800587320 /* PostLoader.swift */; };
 		71CF9BAA281DA23400587320 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BA9281DA23400587320 /* Observer.swift */; };
 		71CF9BAC281DA55B00587320 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BAB281DA55B00587320 /* Helpers.swift */; };
+		71CF9BAE281DA86F00587320 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BAD281DA86F00587320 /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		71CF9BA6281D9DF800587320 /* PostLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoader.swift; sourceTree = "<group>"; };
 		71CF9BA9281DA23400587320 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		71CF9BAB281DA55B00587320 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		71CF9BAD281DA86F00587320 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				71CF9BA8281DA22700587320 /* Common */,
+				71CF9BAD281DA86F00587320 /* PostViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71CF9BAE281DA86F00587320 /* PostViewModel.swift in Sources */,
 				71CF9BA7281D9DF800587320 /* PostLoader.swift in Sources */,
 				71CF9BAA281DA23400587320 /* Observer.swift in Sources */,
 				71CF9BA2281D984300587320 /* URLSessionHTTPClient.swift in Sources */,

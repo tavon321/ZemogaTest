@@ -8,33 +8,6 @@
 import XCTest
 import TestZemoga
 
-class PostViewModel {
-    
-    private let postsLoader: PostLoader
-    
-    public var onLoadingStateChange: (Observer<Bool>)?
-    public var onPostLoaded: (Observer<[Post]>)?
-    
-    init(postLoader: PostLoader) {
-        self.postsLoader = postLoader
-    }
-    
-    func loadPosts() {
-        onLoadingStateChange?(true)
-        postsLoader.load { [weak self] result in
-            switch result {
-            case .success(let posts):
-                self?.onPostLoaded?(posts)
-            case .failure(let failure):
-                // TODO: Handler errors
-                print(failure)
-            }
-            
-            self?.onLoadingStateChange?(false)
-        }
-    }
-}
-
 class PostViewModelTests: XCTestCase {
     
     func test_init_doesNotMessagePostLoader() {
