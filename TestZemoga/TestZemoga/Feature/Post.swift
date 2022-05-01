@@ -12,7 +12,7 @@ public struct Post: Equatable, Hashable, Decodable {
     public let userId: Int
     public let title: String
     public let body: String
-    public let isFavorite: Bool?
+    public var isFavorite: Bool?
     
     public init(id: Int,
                 userId: Int,

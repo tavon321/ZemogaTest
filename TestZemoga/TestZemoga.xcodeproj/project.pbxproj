@@ -48,6 +48,7 @@
 		71CF9BE3281DF8DE00587320 /* PostDetailUserInfoCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BE2281DF8DE00587320 /* PostDetailUserInfoCellController.swift */; };
 		71CF9BE5281DF8ED00587320 /* PostDetailCommentsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BE4281DF8ED00587320 /* PostDetailCommentsCellController.swift */; };
 		71CF9BEC281E03DC00587320 /* PostDetailUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BEB281E03DC00587320 /* PostDetailUIComposer.swift */; };
+		71CF9BF0281E128A00587320 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BEF281E128A00587320 /* DeleteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		71CF9BE2281DF8DE00587320 /* PostDetailUserInfoCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUserInfoCellController.swift; sourceTree = "<group>"; };
 		71CF9BE4281DF8ED00587320 /* PostDetailCommentsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCommentsCellController.swift; sourceTree = "<group>"; };
 		71CF9BEB281E03DC00587320 /* PostDetailUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUIComposer.swift; sourceTree = "<group>"; };
+		71CF9BEF281E128A00587320 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 			children = (
 				71CF9B69281D886B00587320 /* Posts.storyboard */,
 				71CF9BB3281DCC5300587320 /* PostCell.swift */,
+				71CF9BEF281E128A00587320 /* DeleteButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				71CF9B66281D886B00587320 /* SceneDelegate.swift in Sources */,
 				71CF9BDE281DF4A400587320 /* PostDetailController.swift in Sources */,
 				71CF9BCC281DEBE100587320 /* RemoteCommentsLoader.swift in Sources */,
+				71CF9BF0281E128A00587320 /* DeleteButton.swift in Sources */,
 				71CF9B96281D88F800587320 /* Post.swift in Sources */,
 				71CF9BE5281DF8ED00587320 /* PostDetailCommentsCellController.swift in Sources */,
 				71CF9BB4281DCC5300587320 /* PostCell.swift in Sources */,

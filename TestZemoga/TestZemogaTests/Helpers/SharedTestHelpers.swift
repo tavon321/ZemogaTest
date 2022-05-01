@@ -16,7 +16,7 @@ func makePost(id: Int,
                      userId: userId,
                      title: title,
                      body: body,
-                     isFavorite: nil)
+                     isFavorite: false)
     let json = [
         "id": id,
         "userId": userId,

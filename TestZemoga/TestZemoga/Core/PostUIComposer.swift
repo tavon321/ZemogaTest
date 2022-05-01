@@ -30,9 +30,12 @@ struct PostUIComposer {
     -> ([Post]) -> Void {
         return { [weak controller] posts in
             controller?.cellControllers = posts.map({ post in
-                let controller = PostCellController(post: post)
-                controller.onTap = { onPostTapped(post) }
-                return controller
+                let cellCotroller = PostCellController(post: post)
+                cellCotroller.onTap = { onPostTapped(post) }
+                cellCotroller.onFavoriteTap = {
+                    controller?.reloadData()
+                }
+                return cellCotroller
             })
         }
     }

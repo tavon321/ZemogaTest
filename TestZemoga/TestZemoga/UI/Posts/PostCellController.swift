@@ -9,9 +9,10 @@ import UIKit
 
 final class PostCellController: Hashable {
 
-    let post: Post
+    var post: Post
     
     public var onTap: (() -> Void)?
+    public var onFavoriteTap: (() -> Void)?
     
     internal init(post: Post) {
         self.post = post
@@ -22,6 +23,12 @@ final class PostCellController: Hashable {
         
         cell.title.text = post.title
         cell.subtitle.text = post.body
+        cell.favoriteButton.isSelected = post.isFavorite ?? false
+        
+        cell.onButtonTap = { [weak self] isSelected in
+            self?.post.isFavorite = isSelected
+            self?.onFavoriteTap?()
+        }
         
         return cell
     }

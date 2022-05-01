@@ -15,7 +15,7 @@ final class PostsController: UITableViewController {
     
     var cellControllers = [PostCellController]() {
         didSet {
-            update(with: cellControllers)
+            reloadData()
         }
     }
     
@@ -43,6 +43,15 @@ final class PostsController: UITableViewController {
     
     @objc func refresh() {
         viewModel.loadPosts()
+    }
+    
+    func reloadData() {
+        let cellControllers = cellControllers.sorted(by: { leftProfile, rightProfile in
+            let isLeftFavorite = leftProfile.post.isFavorite ?? false
+            let isRightFavorite = rightProfile.post.isFavorite ?? false
+            return isLeftFavorite  && !isRightFavorite
+        })
+        update(with: cellControllers)
     }
     
     private func binded(_ view: UIRefreshControl) -> UIRefreshControl {
