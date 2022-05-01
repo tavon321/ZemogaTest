@@ -28,7 +28,7 @@
 		71CF9BB4281DCC5300587320 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB3281DCC5300587320 /* PostCell.swift */; };
 		71CF9BB6281DD1C200587320 /* PostCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB5281DD1C200587320 /* PostCellController.swift */; };
 		71CF9BB8281DD47600587320 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB7281DD47600587320 /* MainQueueDispatchDecorator.swift */; };
-		71CF9BBA281DD4AB00587320 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB9281DD4AB00587320 /* FeedUIComposer.swift */; };
+		71CF9BBA281DD4AB00587320 /* PostUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BB9281DD4AB00587320 /* PostUIComposer.swift */; };
 		71CF9BBD281DDDD000587320 /* UserInfoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BBC281DDDD000587320 /* UserInfoLoader.swift */; };
 		71CF9BBF281DDDFF00587320 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BBE281DDDFF00587320 /* UserInfo.swift */; };
 		71CF9BC1281DDE9900587320 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BC0281DDE9900587320 /* Comment.swift */; };
@@ -39,6 +39,15 @@
 		71CF9BCC281DEBE100587320 /* RemoteCommentsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BCB281DEBE100587320 /* RemoteCommentsLoader.swift */; };
 		71CF9BCE281DED6F00587320 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BCD281DED6F00587320 /* UserInfoViewModel.swift */; };
 		71CF9BD0281DEF4900587320 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BCF281DEF4900587320 /* CommentsViewModel.swift */; };
+		71CF9BD2281DF04C00587320 /* PostDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CF9BD1281DF04C00587320 /* PostDetail.storyboard */; };
+		71CF9BD6281DF13700587320 /* PostDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BD5281DF13700587320 /* PostDetailHeaderCell.swift */; };
+		71CF9BD8281DF25D00587320 /* PostDetailUserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BD7281DF25D00587320 /* PostDetailUserInfoCell.swift */; };
+		71CF9BDC281DF48900587320 /* PostDetailCommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BDB281DF48900587320 /* PostDetailCommentsCell.swift */; };
+		71CF9BDE281DF4A400587320 /* PostDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BDD281DF4A400587320 /* PostDetailController.swift */; };
+		71CF9BE1281DF8CD00587320 /* PostDetailHeaderCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BE0281DF8CD00587320 /* PostDetailHeaderCellController.swift */; };
+		71CF9BE3281DF8DE00587320 /* PostDetailUserInfoCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BE2281DF8DE00587320 /* PostDetailUserInfoCellController.swift */; };
+		71CF9BE5281DF8ED00587320 /* PostDetailCommentsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BE4281DF8ED00587320 /* PostDetailCommentsCellController.swift */; };
+		71CF9BEC281E03DC00587320 /* PostDetailUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF9BEB281E03DC00587320 /* PostDetailUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +93,7 @@
 		71CF9BB3281DCC5300587320 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		71CF9BB5281DD1C200587320 /* PostCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellController.swift; sourceTree = "<group>"; };
 		71CF9BB7281DD47600587320 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
-		71CF9BB9281DD4AB00587320 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
+		71CF9BB9281DD4AB00587320 /* PostUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUIComposer.swift; sourceTree = "<group>"; };
 		71CF9BBC281DDDD000587320 /* UserInfoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoLoader.swift; sourceTree = "<group>"; };
 		71CF9BBE281DDDFF00587320 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		71CF9BC0281DDE9900587320 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -95,6 +104,15 @@
 		71CF9BCB281DEBE100587320 /* RemoteCommentsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommentsLoader.swift; sourceTree = "<group>"; };
 		71CF9BCD281DED6F00587320 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 		71CF9BCF281DEF4900587320 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		71CF9BD1281DF04C00587320 /* PostDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostDetail.storyboard; sourceTree = "<group>"; };
+		71CF9BD5281DF13700587320 /* PostDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailHeaderCell.swift; sourceTree = "<group>"; };
+		71CF9BD7281DF25D00587320 /* PostDetailUserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUserInfoCell.swift; sourceTree = "<group>"; };
+		71CF9BDB281DF48900587320 /* PostDetailCommentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailCommentsCell.swift; sourceTree = "<group>"; };
+		71CF9BDD281DF4A400587320 /* PostDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailController.swift; sourceTree = "<group>"; };
+		71CF9BE0281DF8CD00587320 /* PostDetailHeaderCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailHeaderCellController.swift; sourceTree = "<group>"; };
+		71CF9BE2281DF8DE00587320 /* PostDetailUserInfoCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUserInfoCellController.swift; sourceTree = "<group>"; };
+		71CF9BE4281DF8ED00587320 /* PostDetailCommentsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCommentsCellController.swift; sourceTree = "<group>"; };
+		71CF9BEB281E03DC00587320 /* PostDetailUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUIComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,10 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				71CF9BB0281DCC1400587320 /* Helpers */,
-				71CF9BB3281DCC5300587320 /* PostCell.swift */,
-				71CF9B67281D886B00587320 /* PostsController.swift */,
-				71CF9BB5281DD1C200587320 /* PostCellController.swift */,
-				71CF9B69281D886B00587320 /* Posts.storyboard */,
+				71CF9BD3281DF10F00587320 /* Posts */,
+				71CF9BD4281DF11D00587320 /* PostDetail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -244,8 +260,9 @@
 		71CF9BBB281DD4AE00587320 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				71CF9BB9281DD4AB00587320 /* FeedUIComposer.swift */,
 				71CF9B63281D886B00587320 /* AppDelegate.swift */,
+				71CF9BEB281E03DC00587320 /* PostDetailUIComposer.swift */,
+				71CF9BB9281DD4AB00587320 /* PostUIComposer.swift */,
 				71CF9B65281D886B00587320 /* SceneDelegate.swift */,
 			);
 			path = Core;
@@ -258,6 +275,48 @@
 				71CF9BC7281DE85C00587320 /* HTTPClientSpy.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		71CF9BD3281DF10F00587320 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9BB5281DD1C200587320 /* PostCellController.swift */,
+				71CF9B67281D886B00587320 /* PostsController.swift */,
+				71CF9BEE281E107B00587320 /* View */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		71CF9BD4281DF11D00587320 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9BDF281DF8B800587320 /* View */,
+				71CF9BDD281DF4A400587320 /* PostDetailController.swift */,
+				71CF9BE0281DF8CD00587320 /* PostDetailHeaderCellController.swift */,
+				71CF9BE2281DF8DE00587320 /* PostDetailUserInfoCellController.swift */,
+				71CF9BE4281DF8ED00587320 /* PostDetailCommentsCellController.swift */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		71CF9BDF281DF8B800587320 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9BD1281DF04C00587320 /* PostDetail.storyboard */,
+				71CF9BD5281DF13700587320 /* PostDetailHeaderCell.swift */,
+				71CF9BD7281DF25D00587320 /* PostDetailUserInfoCell.swift */,
+				71CF9BDB281DF48900587320 /* PostDetailCommentsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		71CF9BEE281E107B00587320 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71CF9B69281D886B00587320 /* Posts.storyboard */,
+				71CF9BB3281DCC5300587320 /* PostCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71CF9B70281D886C00587320 /* LaunchScreen.storyboard in Resources */,
+				71CF9BD2281DF04C00587320 /* PostDetail.storyboard in Resources */,
 				71CF9B6D281D886C00587320 /* Assets.xcassets in Resources */,
 				71CF9B6B281D886B00587320 /* Posts.storyboard in Resources */,
 			);
@@ -395,24 +455,32 @@
 				71CF9BBD281DDDD000587320 /* UserInfoLoader.swift in Sources */,
 				71CF9BA7281D9DF800587320 /* PostLoader.swift in Sources */,
 				71CF9BAA281DA23400587320 /* Observer.swift in Sources */,
+				71CF9BEC281E03DC00587320 /* PostDetailUIComposer.swift in Sources */,
 				71CF9BB2281DCC2900587320 /* UITableView+dequeueReusableCell.swift in Sources */,
 				71CF9BCE281DED6F00587320 /* UserInfoViewModel.swift in Sources */,
 				71CF9BBF281DDDFF00587320 /* UserInfo.swift in Sources */,
-				71CF9BBA281DD4AB00587320 /* FeedUIComposer.swift in Sources */,
+				71CF9BD6281DF13700587320 /* PostDetailHeaderCell.swift in Sources */,
+				71CF9BBA281DD4AB00587320 /* PostUIComposer.swift in Sources */,
+				71CF9BE1281DF8CD00587320 /* PostDetailHeaderCellController.swift in Sources */,
+				71CF9BD8281DF25D00587320 /* PostDetailUserInfoCell.swift in Sources */,
 				71CF9BC1281DDE9900587320 /* Comment.swift in Sources */,
 				71CF9BA2281D984300587320 /* URLSessionHTTPClient.swift in Sources */,
 				71CF9BCA281DEBBE00587320 /* CommentsLoader.swift in Sources */,
 				71CF9B68281D886B00587320 /* PostsController.swift in Sources */,
 				71CF9BC3281DE4BE00587320 /* RemoteUserInfoLoader.swift in Sources */,
+				71CF9BE3281DF8DE00587320 /* PostDetailUserInfoCellController.swift in Sources */,
 				71CF9BB6281DD1C200587320 /* PostCellController.swift in Sources */,
 				71CF9B64281D886B00587320 /* AppDelegate.swift in Sources */,
 				71CF9BB8281DD47600587320 /* MainQueueDispatchDecorator.swift in Sources */,
 				71CF9BA0281D97FD00587320 /* HTTPClient.swift in Sources */,
 				71CF9BD0281DEF4900587320 /* CommentsViewModel.swift in Sources */,
+				71CF9BDC281DF48900587320 /* PostDetailCommentsCell.swift in Sources */,
 				71CF9B9E281D97E100587320 /* RemotePostLoader.swift in Sources */,
 				71CF9B66281D886B00587320 /* SceneDelegate.swift in Sources */,
+				71CF9BDE281DF4A400587320 /* PostDetailController.swift in Sources */,
 				71CF9BCC281DEBE100587320 /* RemoteCommentsLoader.swift in Sources */,
 				71CF9B96281D88F800587320 /* Post.swift in Sources */,
+				71CF9BE5281DF8ED00587320 /* PostDetailCommentsCellController.swift in Sources */,
 				71CF9BB4281DCC5300587320 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

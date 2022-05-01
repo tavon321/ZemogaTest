@@ -7,8 +7,9 @@
 
 import UIKit
 
-struct FeedUIComposer {
-    static func postsComposedWith(postLoader: PostLoader) -> PostsController {
+struct PostUIComposer {
+    static func postsComposedWith(postLoader: PostLoader,
+                                  onPostTapped: @escaping (Post) -> Void) -> PostsController {
         let mainQueuePostLoader = MainQueueDispatchDecorator(decoratee: postLoader)
         let viewModel = PostViewModel(postLoader: mainQueuePostLoader)
         
@@ -18,15 +19,21 @@ struct FeedUIComposer {
             PostsController(coder: coder, viewModel: viewModel)
         }!
         
-        viewModel.onPostLoaded = adaptPostToCellControllers(forwardingToo: controller)
+        viewModel.onPostLoaded = adaptPostToCellControllers(forwardingToo: controller,
+                                                            onPostTapped: onPostTapped)
         
         return controller
     }
     
-    private static func adaptPostToCellControllers(forwardingToo controller: PostsController)
+    private static func adaptPostToCellControllers(forwardingToo controller: PostsController,
+                                                   onPostTapped: @escaping (Post) -> Void)
     -> ([Post]) -> Void {
         return { [weak controller] posts in
-            controller?.cellControllers = posts.map({ PostCellController(post: $0) })
+            controller?.cellControllers = posts.map({ post in
+                let controller = PostCellController(post: post)
+                controller.onTap = { onPostTapped(post) }
+                return controller
+            })
         }
     }
 }

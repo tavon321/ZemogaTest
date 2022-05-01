@@ -11,7 +11,6 @@ import Foundation
 class CommentsViewModel {
     private let commentsLoader: CommentsLoader
     
-    public var onLoadingStateChange: (Observer<Bool>)?
     public var onCommentsLoaded: (Observer<[Comment]>)?
     
     internal init(commentsLoader: CommentsLoader) {
@@ -19,7 +18,6 @@ class CommentsViewModel {
     }
     
     public func loadComments(for postId: Int) {
-        onLoadingStateChange?(true)
         commentsLoader.load(for: postId) { [weak self] result in
             switch result {
             case .success(let comments):
@@ -28,7 +26,6 @@ class CommentsViewModel {
                 // TODO: Handler errors
                 print(failure)
             }
-            self?.onLoadingStateChange?(false)
         }
     }
 }

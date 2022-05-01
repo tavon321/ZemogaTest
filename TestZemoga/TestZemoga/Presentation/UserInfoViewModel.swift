@@ -11,8 +11,6 @@ import Foundation
 class UserInfoViewModel {
     
     private let userInfoLoader: UserInfoLoader
-    
-    public var onLoadingStateChange: (Observer<Bool>)?
     public var onUserInfoLoaded: (Observer<UserInfo>)?
     
     internal init(userInfoLoader: UserInfoLoader) {
@@ -20,7 +18,6 @@ class UserInfoViewModel {
     }
     
     public func loadUserInfo(userId: Int) {
-        onLoadingStateChange?(true)
         userInfoLoader.load(userId: userId) { [weak self] result in
             switch result {
             case .success(let userInfo):
@@ -29,7 +26,6 @@ class UserInfoViewModel {
                 // TODO: Handler errors
                 print(failure)
             }
-            self?.onLoadingStateChange?(false)
         }
     }
 }

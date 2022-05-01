@@ -61,7 +61,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="favoriteButton" destination="x4C-HC-8W6" id="b6w-CE-kCv"/>
-                                    <outlet property="subTitle" destination="82j-we-Kwe" id="Jdn-KK-ObG"/>
+                                    <outlet property="subtitle" destination="82j-we-Kwe" id="WKn-ub-4Y2"/>
                                     <outlet property="title" destination="ZAg-yt-0rg" id="0h8-LS-jyW"/>
                                 </connections>
                             </tableViewCell>

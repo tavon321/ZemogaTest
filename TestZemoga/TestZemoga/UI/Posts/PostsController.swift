@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostsController: UITableViewController {
+final class PostsController: UITableViewController {
     
     private let viewModel: PostViewModel
     
@@ -32,6 +32,7 @@ class PostsController: UITableViewController {
         super.viewDidLoad()
         refreshControl = binded(UIRefreshControl())
         tableView.dataSource = dataSource
+        tableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,5 +78,9 @@ class PostsController: UITableViewController {
         snapshot.appendItems(controllers, toSection: section)
         
         dataSource.apply(snapshot, animatingDifferences: animate)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellControllers[indexPath.row].onTap?()
     }
 }

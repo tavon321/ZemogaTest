@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Comment: Decodable {
+public struct Comment: Decodable, Hashable {
     let body: String
     
     public init(body: String) {

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class PostCell: UITableViewCell {
+final class PostCell: UITableViewCell {
     @IBOutlet var title: UILabel!
-    @IBOutlet var subTitle: UILabel!
+    @IBOutlet var subtitle: UILabel!
     @IBOutlet var favoriteButton: UIButton?
 }
