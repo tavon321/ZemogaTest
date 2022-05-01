@@ -33,10 +33,6 @@ final class PostsController: UITableViewController {
         refreshControl = binded(UIRefreshControl())
         tableView.dataSource = dataSource
         tableView.delegate = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         viewModel.loadPosts()
     }
