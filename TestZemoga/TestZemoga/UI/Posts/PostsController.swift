@@ -13,6 +13,8 @@ final class PostsController: UITableViewController {
     
     private lazy var dataSource = makeDataSource()
     
+    lazy var button = DeleteButton()
+    
     var cellControllers = [PostCellController]() {
         didSet {
             reloadData()
@@ -31,10 +33,22 @@ final class PostsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshControl = binded(UIRefreshControl())
+        
         tableView.dataSource = dataSource
         tableView.delegate = self
         
         viewModel.loadPosts()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        addRemoveAllButton()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellControllers[indexPath.row].onTap?()
     }
     
     @objc func refresh() {
@@ -62,6 +76,31 @@ final class PostsController: UITableViewController {
         return view
     }
     
+    private func addRemoveAllButton() {
+        button.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            button.heightAnchor.constraint(equalToConstant: 60),
+            button.widthAnchor.constraint(equalToConstant: 60),
+        ])
+        
+        tableView.bringSubviewToFront(button)
+        
+        button.addTarget(self, action: #selector(deleteAllTapped), for: .touchUpInside)
+    }
+    
+    @objc private func deleteAllTapped() {
+        cellControllers.removeAll()
+    }
+}
+    
+
+// MARK: Datasource
+
+extension PostsController {
     enum Section: String {
         case posts
     }
@@ -85,7 +124,4 @@ final class PostsController: UITableViewController {
         dataSource.apply(snapshot, animatingDifferences: animate)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        cellControllers[indexPath.row].onTap?()
-    }
 }
