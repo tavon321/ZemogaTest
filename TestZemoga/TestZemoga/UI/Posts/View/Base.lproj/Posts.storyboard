@@ -37,30 +37,44 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="arA-PK-esN">
-                                            <rect key="frame" x="67" y="6" width="335" height="182"/>
+                                            <rect key="frame" x="67" y="6" width="263" height="182"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAg-yt-0rg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="263" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82j-we-Kwe">
-                                                    <rect key="frame" x="0.0" y="17" width="335" height="165"/>
+                                                    <rect key="frame" x="0.0" y="17" width="263" height="165"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uV-pV-ncg" customClass="DeleteButton" customModule="TestZemoga" customModuleProvider="target">
+                                            <rect key="frame" x="338" y="75" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="bLJ-o8-HQK"/>
+                                                <constraint firstAttribute="height" constant="44" id="lQc-6d-KcE"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain"/>
+                                            <connections>
+                                                <action selector="deleteButtonTapped:" destination="aMr-fs-YOG" eventType="touchUpInside" id="17K-BP-Tgs"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="arA-PK-esN" firstAttribute="leading" secondItem="x4C-HC-8W6" secondAttribute="trailing" constant="8" id="125-uk-530"/>
-                                        <constraint firstAttribute="trailing" secondItem="arA-PK-esN" secondAttribute="trailing" constant="12" id="756-Y0-Stw"/>
+                                        <constraint firstItem="8uV-pV-ncg" firstAttribute="leading" secondItem="arA-PK-esN" secondAttribute="trailing" constant="8" id="4JV-UK-a7b"/>
                                         <constraint firstItem="x4C-HC-8W6" firstAttribute="leading" secondItem="AeZ-xE-Lsz" secondAttribute="leading" constant="12" id="JXI-yO-FJi"/>
                                         <constraint firstItem="arA-PK-esN" firstAttribute="top" secondItem="AeZ-xE-Lsz" secondAttribute="top" constant="6" id="ODW-Oo-7BU"/>
                                         <constraint firstItem="x4C-HC-8W6" firstAttribute="top" secondItem="AeZ-xE-Lsz" secondAttribute="top" constant="8" id="VB9-Zl-UUk"/>
+                                        <constraint firstItem="8uV-pV-ncg" firstAttribute="centerY" secondItem="AeZ-xE-Lsz" secondAttribute="centerY" id="cdZ-OG-MeX"/>
                                         <constraint firstAttribute="bottom" secondItem="arA-PK-esN" secondAttribute="bottom" constant="6" id="hY1-ZD-qJT"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8uV-pV-ncg" secondAttribute="trailing" constant="12" id="p58-Si-b3o"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

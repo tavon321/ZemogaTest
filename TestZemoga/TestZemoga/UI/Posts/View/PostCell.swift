@@ -12,7 +12,8 @@ final class PostCell: UITableViewCell {
     @IBOutlet var subtitle: UILabel!
     @IBOutlet var favoriteButton: UIButton!
     
-    var onButtonTap: ((Bool) -> Void)?
+    var onFavoriteButtonTap: ((Bool) -> Void)?
+    var onDeleteButtonTap: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,10 @@ final class PostCell: UITableViewCell {
     
     @IBAction func buttonTapped(_ sender: Any) {
         favoriteButton.isSelected = !favoriteButton.isSelected
-        onButtonTap?(favoriteButton.isSelected)
+        onFavoriteButtonTap?(favoriteButton.isSelected)
+    }
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        onDeleteButtonTap?()
     }
 }

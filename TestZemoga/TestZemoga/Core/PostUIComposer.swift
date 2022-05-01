@@ -29,11 +29,16 @@ struct PostUIComposer {
                                                    onPostTapped: @escaping (Post) -> Void)
     -> ([Post]) -> Void {
         return { [weak controller] posts in
-            controller?.cellControllers = posts.map({ post in
+            guard let controller = controller else { return }
+            controller.cellControllers = posts.map({ post in
                 let cellCotroller = PostCellController(post: post)
                 cellCotroller.onTap = { onPostTapped(post) }
                 cellCotroller.onFavoriteTap = {
-                    controller?.reloadData()
+                    controller.reloadData()
+                }
+                
+                cellCotroller.onDeleteTap = { toDeleteController in
+                    controller.cellControllers = controller.cellControllers.filter { $0 != toDeleteController }
                 }
                 return cellCotroller
             })

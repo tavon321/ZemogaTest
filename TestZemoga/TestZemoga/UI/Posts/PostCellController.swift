@@ -13,6 +13,7 @@ final class PostCellController: Hashable {
     
     public var onTap: (() -> Void)?
     public var onFavoriteTap: (() -> Void)?
+    public var onDeleteTap: ((PostCellController) -> Void)?
     
     internal init(post: Post) {
         self.post = post
@@ -25,9 +26,14 @@ final class PostCellController: Hashable {
         cell.subtitle.text = post.body
         cell.favoriteButton.isSelected = post.isFavorite ?? false
         
-        cell.onButtonTap = { [weak self] isSelected in
+        cell.onFavoriteButtonTap = { [weak self] isSelected in
             self?.post.isFavorite = isSelected
             self?.onFavoriteTap?()
+        }
+        
+        cell.onDeleteButtonTap = { [weak self] in
+            guard let self = self else { return }
+            self.onDeleteTap?(self)
         }
         
         return cell

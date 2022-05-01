@@ -17,13 +17,33 @@ class DeleteButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        configureView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        configureView()
+    }
+    
+    private func configureView() {
         setImage(UIImage(systemName: "trash"), for: .normal)
         backgroundColor = .red
         tintColor = .white
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 0.2) {
+            self.alpha = 0
+        }
+        
+        super.touchesBegan(touches, with: event)
+
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 0.2) {
+            self.alpha = 1
+        }
+        super.touchesEnded(touches, with: event)
     }
 }
